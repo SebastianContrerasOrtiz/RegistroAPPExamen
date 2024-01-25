@@ -1,0 +1,56 @@
+<ion-header class="background">
+  <!--<ion-button color="dark" [routerLink]="['/inicio']">Volver</ion-button>-->
+  <ion-toolbar color="warning">
+    <ion-title class="ion-padding-top ion-text-center">
+      Login RegistroApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-card>
+    <ion-card-content>
+      <div class="logo">
+        <img src="../../assets/Img/user.png" alt="Logo">
+      </div>
+
+      <br>
+      <br>
+
+      <form [formGroup]="loginForm">
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Usuario</ion-label>
+              <ion-input formControlName="nombre" type="text" ([ngModel])="nombre" placeholder="sebastian"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input formControlName="password" type="password" placeholder="Maximo 6 a 10 caracteres"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <br>
+        <br>
+        <div class="ingresar">
+          <ion-button (click)="login()" color="secondary">Iniciar Sesión</ion-button>
+        </div>
+      </form>
+      <br>
+      <div class="enlace">
+        <a>¿Olvidaste tu contraseña?</a>
+        <a href="recuperar" class="enlace"> Recuperar Contraseña </a>
+      </div>
+      <div>
+        <ion-card-content style="text-align: center;">
+          <ion-button color="secondary" (click)="Registro()">Registrarse</ion-button>
+        </ion-card-content>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
